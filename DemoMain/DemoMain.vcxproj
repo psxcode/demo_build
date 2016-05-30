@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="RelDebug|Win32">
+      <Configuration>RelDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EBBE95B6-9282-42D0-A6CF-42A59F15E299}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>demo</RootNamespace>
+    <ProjectName>DemoMain</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='RelDebug|Win32'">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelDebug|Win32'">
+    <Import Project="..\vsprops\include_ogre.props" />
+    <Import Project="..\vsprops\include_boost.props" />
+	<Import Project="..\vsprops\include_demo.props" />
+	<Import Project="..\vsprops\output_dirs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+	<Import Project="..\vsprops\include_ogre.props" />
+    <Import Project="..\vsprops\include_boost.props" />
+	<Import Project="..\vsprops\include_demo.props" />
+	<Import Project="..\vsprops\output_dirs.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <ClInclude Include="..\..\demo_hg\DemoMain\include\DemoDelegate.h" />
+    <ClInclude Include="..\..\demo_hg\DemoMain\include\DemoMemoryAllocatorConfig.h" />
+    <ClInclude Include="..\..\demo_hg\DemoMain\include\DemoPrerequisites.h" />
+    <ClInclude Include="..\..\demo_hg\DemoMain\include\DemoSharedPtr.h" />
+    <ClInclude Include="..\..\demo_hg\DemoMain\include\DonClugstonDelegate.h" />
+    <ClInclude Include="..\include\DemoBuildSettings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\demo_hg\DemoMain\src\DemoPrecompiledHeaders.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
